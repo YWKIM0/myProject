@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            height: 213px;
+            background-color: #DFFFD8;
+        }
+        main {
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            background-image: url(img/space.jpg);
+        }
+        
+        footer {
+            height: 310px;
+            background-color: darkgray;
+        }
+
+        .main_logo {
+            font-size: 40px;
+            font-family: GmarketSansMedium;
+            color: #b4e4ff;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        .join {
+            width: 500px;
+            height: 300px;
+            background-color: #95BDFF;
+            margin-top: 100px;
+            border-radius: 6px;
+        }
+
+        .join h2 {
+            font-size: 35px;
+            color: white;
+            margin: 20px;
+        }
+        
+        #join_form input {
+            width: 90%;
+            height: 48px;
+            padding: 0 10px;
+            margin-bottom: 10px;
+            /* border-radius: 5px; */
+            border: 2px solid white;
+            border-radius: 6px;
+            margin-left: 20px;
+        }
+
+        .error_msg {
+            width: 90%;
+            height: 20px;
+            color: red;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        #join_form input[type='submit']{
+            background-color: #F7C8E0;
+            font-size: 16px;
+            color: #95BDFF;
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="main_logo">
+            <i class="fa-solid fa-rocket" style="color: #b4e4ff; font-size: 60px;"></i>
+            <span>메인로고</span>
+        </div>
+    </header>
+    <main>
+        <div class="join">
+            <h2>회원가입</h2>
+            <form action="" id="join_form" onsubmit="return false;">
+                <input id="email" type="email" placeholder="이메일을 입력하세요.">
+                <input id="pw" type="password" placeholder="비밀번호를 입력하세요.">
+                <div class="error_msg"></div>
+                <input type="submit" value="가입하기" id="join_btn">
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script>
+        window.onload = () => {
+            document.getElementById('join_btn').addEventListener('click', function(){
+                let email = document.getElementById('email').value;
+                let pw = document.getElementById('pw').value;
+                let err_msg = document.querySelector('.error_msg');
+                if(email == '') {
+                    // alert('공백!');
+                    err_msg.textContent = '아이디를 입력해주세요!';
+                } else if (pw == '') {
+                    err_msg.textContent = '비밀번호를 입력해주세요!';
+                } else {
+                    location.href='login_ok.html';
+                }
+                // if(email != '' && pw == '') {
+                //     err_msg.textContent = '비밀번호를 입력해주세요!';
+                // }
+            });
+        }
+    </script>
+</body>
+</html>
