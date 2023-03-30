@@ -18,14 +18,17 @@
         }
         main {
             width: 100%;
-            min-height: 500px;
+            min-height: 600px;
             display: flex;
             justify-content: center;
             background-image: url(img/space.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
         }
         
         footer {
-            height: 310px;
+            height: 210px;
             background-color: darkgray;
         }
 
@@ -40,9 +43,10 @@
 
         .join {
             width: 500px;
-            height: 300px;
+            height: 550px;
             background-color: #95BDFF;
-            margin-top: 100px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             border-radius: 6px;
         }
 
@@ -60,7 +64,7 @@
             /* border-radius: 5px; */
             border: 2px solid white;
             border-radius: 6px;
-            margin-left: 20px;
+            margin-left: 23px;
         }
 
         .error_msg {
@@ -74,7 +78,7 @@
         #join_form input[type='submit']{
             background-color: #F7C8E0;
             font-size: 16px;
-            color: #95BDFF;
+            color: #144272;
             font-weight: bold;
         }
         @font-face {
@@ -97,8 +101,13 @@
         <div class="join">
             <h2>회원가입</h2>
             <form action="" id="join_form" onsubmit="return false;">
-                <input id="email" type="email" placeholder="이메일을 입력하세요.">
+                <input id="id" type="text" placeholder="아이디를 입력하세요.">
                 <input id="pw" type="password" placeholder="비밀번호를 입력하세요.">
+                <input id="nickname" type="text" placeholder="닉네임을 입력하세요.">
+                <input id="txtPostCodeC" type="text" placeholder="우편번호" style="width: 45%;" readonly>
+                <input id="btnSearchAddressC" type="button" value="우편번호 찾기" style="width: 44%; margin-left: 0;" onclick="findDaumPostcode()">
+                <input  id="txtAddressC" type="text" placeholder="주소" readonly>
+                <input id="detailAddress" type="text" placeholder="상세주소">
                 <div class="error_msg"></div>
                 <input type="submit" value="가입하기" id="join_btn">
             </form>
@@ -106,6 +115,7 @@
     </main>
     <footer></footer>
 
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
         window.onload = () => {
             document.getElementById('join_btn').addEventListener('click', function(){
@@ -125,6 +135,17 @@
                 // }
             });
         }
+
+        function findDaumPostcode() {
+      new daum.Postcode({
+        oncomplete: function (data) {
+          let zoneCodeCompany = data.zonecode;
+          let addressCompany = data.address;
+          document.getElementById("txtPostCodeC").value = zoneCodeCompany; // zipcode
+          document.getElementById("txtAddressC").value = addressCompany; // 주소 넣기
+          }
+      }).open();
+    }
     </script>
 </body>
 </html>
