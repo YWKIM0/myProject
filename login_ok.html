@@ -168,10 +168,6 @@
         </form>
         <div class="user_info">
             <p><i class="fa-regular fa-user"></i>  <strong>test</strong> 님 안녕하세요!</p>
-            <!-- <p class="login_msg">ㅇㅇㅇㅇ을 더 안전하고 편리하게 이용하세요</p>
-            <button class="login_btn" onclick="location.href='login.html'">
-                <span style="color: white; font-size: 20px; font-weight: bold;">로그인</span>
-            </button> -->
         </div>
     </header>
     <main>
@@ -189,8 +185,79 @@
             test</span>
             <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, nulla minus perspiciatis qui ratione nemo quae aliquam repellat reiciendis</p>
         </div>
+        <div class="img_slide">
+            <!-- <ul class="img_list"> -->
+                <!-- <li class="img_item"><img src="img/camera.png"></li>
+                <li class="img_item"><img src="img/apples.jpg"></li>
+                <li class="img_item"><img src="img/dog.jpg"></li> -->
+            <div class="share_list">
+                <img class="share_item" src="img/camera.png">
+                <img class="share_item" src="img/apples.jpg">
+                <img class="share_item" src="img/dog.jpg">
+            </div>
+            <!-- </ul> -->
+            <div class="sell_list">
+                <img class="sell_item" src="img/notebook.jpg">
+                <img class="sell_item" src="img/ddalgi.jpg">
+                <img class="sell_item" src="img/bag.jpg">
+            </div>
+        </div>
     </main>
     <footer></footer>
+    <script>
+        window.onload = () => {
+            let index = 0;
+            const share_btn = document.getElementById('btn_share');
+            const sell_btn = document.getElementById('btn_sell');
+            const buy_btn = document.getElementById('btn_buy');
+            const share_list = document.getElementsByClassName('share_list');
+            const sell_list = document.getElementsByClassName('sell_list');
+            const share_item = document.getElementsByClassName('share_item');
+            const sell_item = document.getElementsByClassName('sell_item');
+            let time;
+            share_btn.addEventListener('click', function(){
+                sell_list[0].style.display = 'none';
+                share_list[0].style.display = 'block';
+                index = 0;
+                slideShow(1);
+                clearInterval(time);
+                time = setInterval(slideShow, 2000);
+            });
+            sell_btn.addEventListener('click', function(){
+                share_list[0].style.display = 'none';
+                sell_list[0].style.display = 'block';
+
+                index = 0;
+                clearInterval(time);
+                slideShow(2);
+                time = setInterval(slideShow, 2000);
+            });
+
+            let x;
+            // let index = 0;
+            function slideShow(img_num) {
+                // const x;
+                
+                if(img_num == 1) {
+                    // const x = document.getElementsByClassName('share_item');
+                    x = share_item;
+                } else if(img_num == 2) {
+                    x = sell_item;
+                }
+                // const x = img_items;
+                for(let i = 0; i < x.length; i++) {
+                    x[i].style.display = 'none';
+                }
+                index++;
+                if(index > x.length) {
+                    index = 1;
+                }
+                x[index -1].style.display = 'block'
+                // setTimeout(slideShow, 2000);
+                // setInterval(slideShow, 1500);
+            };
+        }
+    </script>
 </body>
 
 </html>

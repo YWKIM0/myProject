@@ -97,7 +97,7 @@
         <div class="login">
             <h2>Login</h2>
             <form action="" id="login_form" onsubmit="return false;">
-                <input id="email" type="email" placeholder="이메일을 입력하세요.">
+                <input id="id" type="text" placeholder="아이디를 입력하세요.">
                 <input id="pw" type="password" placeholder="비밀번호를 입력하세요.">
                 <div class="error_msg"></div>
                 <input type="submit" value="Login" id="login_btn">
@@ -109,10 +109,10 @@
     <script>
         window.onload = () => {
             document.getElementById('login_btn').addEventListener('click', function(){
-                let email = document.getElementById('email').value;
+                let id = document.getElementById('id').value;
                 let pw = document.getElementById('pw').value;
                 let err_msg = document.querySelector('.error_msg');
-                if(email == '') {
+                if(id == '') {
                     // alert('공백!');
                     err_msg.textContent = '아이디를 입력해주세요!';
                 } else if (pw == '') {
@@ -120,7 +120,7 @@
                 } else {
                     location.href='login_ok.html';
                 }
-                // if(email != '' && pw == '') {
+                // if(id != '' && pw == '') {
                 //     err_msg.textContent = '비밀번호를 입력해주세요!';
                 // }
             });

@@ -24,6 +24,9 @@
 
         main {
             min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         footer {
@@ -45,6 +48,7 @@
             top: 0;
             right: 0;
             width: 20%;
+            /* vertical-align: top; */
         }
 
         ul li {
@@ -55,10 +59,15 @@
         .main_logo {
             font-size: 40px;
             font-family: GmarketSansMedium;
-            color: #b4e4ff;
+            /* color: #b4e4ff; */
             font-weight: bold;
             padding-left: 20px;
             margin-right: 50px;
+            display: block;
+            width: 20%;
+        }
+        .main_logo a span {
+            color: #b4e4ff;
         }
 
         .search_box {
@@ -102,10 +111,13 @@
             display: flex;
             align-items: center;
         }
-        .nav_items ul li {
+        .nav_items ul li  {
             display: inline-block;
             width: 33.3%;
             text-align: center;
+            /* color: white; */
+        }
+        .nav_items ul a {
             color: white;
         }
         .main_msg {
@@ -132,6 +144,35 @@
             background-color: #F7C8E0;
             border: none;
         }
+
+        .img_slide {
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+            margin-top: 10px;
+            /* display: none; */
+        }
+
+        /* .img_item{
+            width: 600px;
+            height: 300px;
+        } */
+        img {
+            width: 600px;
+            height: 300px;
+        }
+
+        legend {
+            display: none;
+        }
+
+        .btn_group button {
+            margin-top: 10px;
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 6px;
+        }
         @font-face {
             font-family: 'GmarketSansMedium';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -147,13 +188,14 @@
         <div class="links">
             <ul>
                 <li><a href="join.html">회원가입</a></li>
-                <li><a href="">장바구니</a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i>장바구니</a></li>
                 <li><a href="">고객센터</a></li>
             </ul>
         </div>
         <div class="main_logo">
+            <a href="main.html">
             <i class="fa-solid fa-rocket" style="color: #b4e4ff; font-size: 60px;"></i>
-            <span>메인로고</span>
+            <span>메인로고</span></a>
         </div>
         <form action="">
             <fieldset>
@@ -178,9 +220,9 @@
         <nav>
             <div class="nav_items">
                 <ul>
-                    <li>나눔</li>
-                    <li>판매</li>
-                    <li>구매</li>
+                    <li><a href="share.html">나눔</a></li>
+                    <li><a href="sale.html">판매</a></li>
+                    <li><a href="buying.html">구매</a></li>
                 </ul>
             </div>
         </nav>
@@ -189,8 +231,84 @@
             test</span>
             <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, nulla minus perspiciatis qui ratione nemo quae aliquam repellat reiciendis</p>
         </div>
+        <div class="btn_group">
+            <button id="btn_share">나눔</button>
+            <button id="btn_sell">판매</button>
+            <button id="btn_buy">구매</button>
+        </div>
+        <div class="img_slide">
+            <!-- <ul class="img_list"> -->
+                <!-- <li class="img_item"><img src="img/camera.png"></li>
+                <li class="img_item"><img src="img/apples.jpg"></li>
+                <li class="img_item"><img src="img/dog.jpg"></li> -->
+            <div class="share_list">
+                <img class="share_item" src="img/camera.png">
+                <img class="share_item" src="img/apples.jpg">
+                <img class="share_item" src="img/dog.jpg">
+            </div>
+            <!-- </ul> -->
+            <div class="sell_list">
+                <img class="sell_item" src="img/notebook.jpg">
+                <img class="sell_item" src="img/ddalgi.jpg">
+                <img class="sell_item" src="img/bag.jpg">
+            </div>
+        </div>
     </main>
     <footer></footer>
+    <script>
+        window.onload = () => {
+            let index = 0;
+            const share_btn = document.getElementById('btn_share');
+            const sell_btn = document.getElementById('btn_sell');
+            const buy_btn = document.getElementById('btn_buy');
+            const share_list = document.getElementsByClassName('share_list');
+            const sell_list = document.getElementsByClassName('sell_list');
+            const share_item = document.getElementsByClassName('share_item');
+            const sell_item = document.getElementsByClassName('sell_item');
+            let time;
+            share_btn.addEventListener('click', function(){
+                sell_list[0].style.display = 'none';
+                share_list[0].style.display = 'block';
+                index = 0;
+                slideShow(1);
+                clearInterval(time);
+                time = setInterval(slideShow, 2000);
+            });
+            sell_btn.addEventListener('click', function(){
+                share_list[0].style.display = 'none';
+                sell_list[0].style.display = 'block';
+
+                index = 0;
+                clearInterval(time);
+                slideShow(2);
+                time = setInterval(slideShow, 2000);
+            });
+
+            let x;
+            // let index = 0;
+            function slideShow(img_num) {
+                // const x;
+                
+                if(img_num == 1) {
+                    // const x = document.getElementsByClassName('share_item');
+                    x = share_item;
+                } else if(img_num == 2) {
+                    x = sell_item;
+                }
+                // const x = img_items;
+                for(let i = 0; i < x.length; i++) {
+                    x[i].style.display = 'none';
+                }
+                index++;
+                if(index > x.length) {
+                    index = 1;
+                }
+                x[index -1].style.display = 'block'
+                // setTimeout(slideShow, 2000);
+                // setInterval(slideShow, 1500);
+            };
+        }
+    </script>
 </body>
 
 </html>
