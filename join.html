@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,13 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         header {
             width: 100%;
             height: 213px;
             background-color: #DFFFD8;
         }
+
         main {
             width: 100%;
             min-height: 600px;
@@ -24,9 +27,9 @@
             background-image: url(img/space.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            
+
         }
-        
+
         footer {
             height: 210px;
             background-color: darkgray;
@@ -55,7 +58,7 @@
             color: white;
             margin: 20px;
         }
-        
+
         #join_form input {
             width: 90%;
             height: 48px;
@@ -75,12 +78,13 @@
             margin-bottom: 10px;
         }
 
-        #join_form input[type='submit']{
+        #join_form input[type='submit'] {
             background-color: #F7C8E0;
             font-size: 16px;
             color: #144272;
             font-weight: bold;
         }
+
         @font-face {
             font-family: 'GmarketSansMedium';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -90,6 +94,7 @@
     </style>
     <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <div class="main_logo">
@@ -105,8 +110,9 @@
                 <input id="pw" type="password" placeholder="비밀번호를 입력하세요.">
                 <input id="nickname" type="text" placeholder="닉네임을 입력하세요.">
                 <input id="txtPostCodeC" type="text" placeholder="우편번호" style="width: 45%;" readonly>
-                <input id="btnSearchAddressC" type="button" value="우편번호 찾기" style="width: 44%; margin-left: 0;" onclick="findDaumPostcode()">
-                <input  id="txtAddressC" type="text" placeholder="주소" readonly>
+                <input id="btnSearchAddressC" type="button" value="우편번호 찾기" style="width: 44%; margin-left: 0;"
+                    onclick="findDaumPostcode()">
+                <input id="txtAddressC" type="text" placeholder="주소" readonly>
                 <input id="detailAddress" type="text" placeholder="상세주소">
                 <div class="error_msg"></div>
                 <input type="submit" value="가입하기" id="join_btn">
@@ -118,17 +124,17 @@
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
         window.onload = () => {
-            document.getElementById('join_btn').addEventListener('click', function(){
+            document.getElementById('join_btn').addEventListener('click', function () {
                 let email = document.getElementById('email').value;
                 let pw = document.getElementById('pw').value;
                 let err_msg = document.querySelector('.error_msg');
-                if(email == '') {
+                if (email == '') {
                     // alert('공백!');
                     err_msg.textContent = '아이디를 입력해주세요!';
                 } else if (pw == '') {
                     err_msg.textContent = '비밀번호를 입력해주세요!';
                 } else {
-                    location.href='login_ok.html';
+                    location.href = 'login_ok.html';
                 }
                 // if(email != '' && pw == '') {
                 //     err_msg.textContent = '비밀번호를 입력해주세요!';
@@ -137,15 +143,16 @@
         }
 
         function findDaumPostcode() {
-      new daum.Postcode({
-        oncomplete: function (data) {
-          let zoneCodeCompany = data.zonecode;
-          let addressCompany = data.address;
-          document.getElementById("txtPostCodeC").value = zoneCodeCompany; // zipcode
-          document.getElementById("txtAddressC").value = addressCompany; // 주소 넣기
-          }
-      }).open();
-    }
+            new daum.Postcode({
+                oncomplete: function (data) {
+                    let zoneCodeCompany = data.zonecode;
+                    let addressCompany = data.address;
+                    document.getElementById("txtPostCodeC").value = zoneCodeCompany; // zipcode
+                    document.getElementById("txtAddressC").value = addressCompany; // 주소 넣기
+                }
+            }).open();
+        }
     </script>
 </body>
+
 </html>
