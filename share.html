@@ -93,11 +93,6 @@
             font-size: 18px;
         }
 
-        input:focus {
-            outline: none;
-            box-shadow: 0 0 10px #00235B;
-        }
-
         .search_box button {
             flex: 1;
             height: 52px;
@@ -105,52 +100,53 @@
             outline: none;
             background-color: #b4e4ff;
         }
-        
+
         main nav {
             width: 100%;
             height: 50px;
             background-color: #F7C8E0;
         }
+
         .nav_items {
             width: 100%;
             height: 100px;
             /* align-items: center; */
             font-size: 30px;
         }
+
         .nav_items ul {
             width: 100%;
             display: flex;
             align-items: center;
         }
+
         .nav_items ul li {
             display: inline-block;
             width: 33.3%;
             text-align: center;
             color: white;
         }
+
         .main_msg {
             width: 100%;
             height: 200px;
             background-image: url(img/space.jpg);
         }
+
         .user_info {
             width: 300px;
             height: 150px;
             background-color: aquamarine;
             margin-left: 50px;
-            margin-top: 20px;
             padding: 16px 16px 12px 17px;
             text-align: center;
-            color: #00235B;
         }
 
-        .user_info p {
-            margin-top: 10px;
-        }
         .login_msg {
             color: gray;
             font-size: 12px;
         }
+
         .login_btn {
             width: 250px;
             height: 48px;
@@ -159,18 +155,28 @@
             border: none;
         }
 
-        .img_slide {
-            width: 600px;
-            height: 300px;
-            overflow: hidden;
-            margin-top: 10px;
-            /* display: none; */
+        img {
+            width: 250px;
+            height: 200px;
         }
 
-        img {
-            width: 600px;
-            height: 300px;
+        .share_items {
+            width: 100%;
         }
+
+        .share_items ul {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .share_items ul li {
+            width: 250px;
+            height: 300px;
+            flex: 1 1 20%;
+        }
+
         @font-face {
             font-family: 'GmarketSansMedium';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -206,7 +212,7 @@
             </fieldset>
         </form>
         <div class="user_info">
-            <p><i class="fa-regular fa-user"></i>  <strong>test</strong> 님 안녕하세요!</p>
+            <p><i class="fa-regular fa-user"></i> <strong>test</strong> 님 안녕하세요!</p>
             <p>36.5</p>
         </div>
     </header>
@@ -220,87 +226,29 @@
                 </ul>
             </div>
         </nav>
-        <div class="main_msg">
-            <span style="color: white; font-family: GmarketSansMedium; font-size: 60px;"> test<br>
-            test</span>
-            <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, nulla minus perspiciatis qui ratione nemo quae aliquam repellat reiciendis</p>
-        </div>
-        <div class="btn_group">
-            <button id="btn_share">나눔</button>
-            <button id="btn_sell">판매</button>
-            <button id="btn_buy">구매</button>
-        </div>
-        <div class="img_slide">
-            <!-- <ul class="img_list"> -->
-                <!-- <li class="img_item"><img src="img/camera.png"></li>
-                <li class="img_item"><img src="img/apples.jpg"></li>
-                <li class="img_item"><img src="img/dog.jpg"></li> -->
-            <div class="share_list">
-                <img class="share_item" src="img/camera.png">
-                <img class="share_item" src="img/apples.jpg">
-                <img class="share_item" src="img/dog.jpg">
-            </div>
-            <!-- </ul> -->
-            <div class="sell_list">
-                <img class="sell_item" src="img/notebook.jpg">
-                <img class="sell_item" src="img/ddalgi.jpg">
-                <img class="sell_item" src="img/bag.jpg">
-            </div>
+        <div class="share_items">
+            <ul>
+                <li>
+                    <img src="img/dog.jpg" alt="">
+                    <p>test</p>
+                    <p>test</p>
+                    <p>test</p>
+                </li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+                <li><img src="img/dog.jpg" alt=""></li>
+            </ul>
         </div>
     </main>
     <footer></footer>
     <script>
         window.onload = () => {
-            let index = 0;
-            const share_btn = document.getElementById('btn_share');
-            const sell_btn = document.getElementById('btn_sell');
-            const buy_btn = document.getElementById('btn_buy');
-            const share_list = document.getElementsByClassName('share_list');
-            const sell_list = document.getElementsByClassName('sell_list');
-            const share_item = document.getElementsByClassName('share_item');
-            const sell_item = document.getElementsByClassName('sell_item');
-            let time;
-            share_btn.addEventListener('click', function(){
-                sell_list[0].style.display = 'none';
-                share_list[0].style.display = 'block';
-                index = 0;
-                slideShow(1);
-                clearInterval(time);
-                time = setInterval(slideShow, 2000);
-            });
-            sell_btn.addEventListener('click', function(){
-                share_list[0].style.display = 'none';
-                sell_list[0].style.display = 'block';
-
-                index = 0;
-                clearInterval(time);
-                slideShow(2);
-                time = setInterval(slideShow, 2000);
-            });
-
-            let x;
-            // let index = 0;
-            function slideShow(img_num) {
-                // const x;
-                
-                if(img_num == 1) {
-                    // const x = document.getElementsByClassName('share_item');
-                    x = share_item;
-                } else if(img_num == 2) {
-                    x = sell_item;
-                }
-                // const x = img_items;
-                for(let i = 0; i < x.length; i++) {
-                    x[i].style.display = 'none';
-                }
-                index++;
-                if(index > x.length) {
-                    index = 1;
-                }
-                x[index -1].style.display = 'block'
-                // setTimeout(slideShow, 2000);
-                // setInterval(slideShow, 1500);
-            };
         }
     </script>
 </body>

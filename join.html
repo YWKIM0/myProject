@@ -44,6 +44,11 @@
             padding-top: 150px;
         }
 
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #00235B;
+        }
+
         .join {
             width: 500px;
             height: 550px;
@@ -125,10 +130,10 @@
     <script>
         window.onload = () => {
             document.getElementById('join_btn').addEventListener('click', function () {
-                let email = document.getElementById('email').value;
+                let id = document.getElementById('id').value;
                 let pw = document.getElementById('pw').value;
                 let err_msg = document.querySelector('.error_msg');
-                if (email == '') {
+                if (id == '') {
                     // alert('공백!');
                     err_msg.textContent = '아이디를 입력해주세요!';
                 } else if (pw == '') {

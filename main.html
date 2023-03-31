@@ -20,6 +20,7 @@
             background-color: #DFFFD8;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         main {
@@ -44,11 +45,12 @@
         }
 
         .links {
+            /* display: flex; */
             position: absolute;
             top: 0;
             right: 0;
-            width: 20%;
-            /* vertical-align: top; */
+            /* width: 100%; */
+            margin-right: 20px;
         }
 
         ul li {
@@ -65,6 +67,7 @@
             margin-right: 50px;
             display: block;
             width: 20%;
+            z-index: 1;
         }
         .main_logo a span {
             color: #b4e4ff;
@@ -85,6 +88,11 @@
             padding-right: 12px;
             border: none;
             font-size: 18px;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #00235B;
         }
 
         .search_box button {
@@ -130,10 +138,12 @@
             height: 150px;
             background-color: aquamarine;
             margin-left: 50px;
-            padding: 16px 16px 12px 17px;
+            /* padding: 16px 16px 12px 17px; */
+            padding-top: 10px;
             text-align: center;
         }
         .login_msg {
+            margin-top: 20px;
             color: gray;
             font-size: 12px;
         }
@@ -141,8 +151,12 @@
             width: 250px;
             height: 48px;
             margin-top: 20px;
+            /* margin-top: 10px; */
             background-color: #F7C8E0;
             border: none;
+        }
+        a > img {
+            margin-top: 10px;
         }
 
         .img_slide {
@@ -153,10 +167,6 @@
             /* display: none; */
         }
 
-        /* .img_item{
-            width: 600px;
-            height: 300px;
-        } */
         img {
             width: 600px;
             height: 300px;
@@ -184,14 +194,21 @@
 </head>
 
 <body>
+    <div class="links">
+        <ul>
+            <li><a href="join.html">회원가입</a></li>
+            <li><a href=""><i class="fa-solid fa-cart-shopping"></i>장바구니</a></li>
+            <li><a href="">고객센터</a></li>
+        </ul>
+    </div>
     <header>
-        <div class="links">
+        <!-- <div class="links">
             <ul>
                 <li><a href="join.html">회원가입</a></li>
                 <li><a href=""><i class="fa-solid fa-cart-shopping"></i>장바구니</a></li>
                 <li><a href="">고객센터</a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="main_logo">
             <a href="main.html">
             <i class="fa-solid fa-rocket" style="color: #b4e4ff; font-size: 60px;"></i>
@@ -213,7 +230,9 @@
             <button class="login_btn" onclick="location.href='login.html'">
                 <span style="color: white; font-size: 20px; font-weight: bold;">로그인</span>
             </button>
-
+            <!-- <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+                <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" style="width: 250px; height: 48px;" alt="카카오 로그인 버튼" />
+              </a> -->
         </div>
     </header>
     <main>
@@ -309,6 +328,46 @@
             };
         }
     </script>
+    <!-- <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+    integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
+  <script>
+    Kakao.init('c089c8172def97eb00c07217cae17495'); // 사용하려는 앱의 JavaScript 키 입력
+  </script>
+  
+  <p id="token-result"></p>
+  
+  <script>
+    function loginWithKakao() {
+      Kakao.Auth.authorize({
+        redirectUri: 'https://developers.kakao.com/tool/demo/oauth',
+      });
+    }
+  
+    // 아래는 데모를 위한 UI 코드입니다.
+    displayToken()
+    function displayToken() {
+      var token = getCookie('authorize-access-token');
+  
+      if(token) {
+        Kakao.Auth.setAccessToken(token);
+        Kakao.Auth.getStatusInfo()
+          .then(function(res) {
+            if (res.status === 'connected') {
+              document.getElementById('token-result').innerText
+                = 'login success, token: ' + Kakao.Auth.getAccessToken();
+            }
+          })
+          .catch(function(err) {
+            Kakao.Auth.setAccessToken(null);
+          });
+      }
+    }
+  
+    function getCookie(name) {
+      var parts = document.cookie.split(name + '=');
+      if (parts.length === 2) { return parts[1].split(';')[0]; }
+    }
+  </script> -->
 </body>
 
 </html>
