@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -16,18 +16,19 @@
 
         header {
             width: 100%;
-            height: 213px;
-            background-color: #DFFFD8;
-            display: flex;
+            height: 210px;
+            /* background-color: #DFFFD8; */
+            /* display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center; */
+            /* background-image: url(img/space.jpg); */
         }
 
         main {
             min-height: 700px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* align-items: center; */
         }
 
         footer {
@@ -41,16 +42,40 @@
 
         a {
             text-decoration: none;
-            color: #888;
+            /* color: white;
+            font-weight: bold; */
         }
 
-        .links {
-            /* display: flex; */
+        .top_nav {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            font-size: 12px;
+            margin-right: 20px;
+        }
+
+        .menu_list {
             position: absolute;
             top: 0;
             right: 0;
-            /* width: 100%; */
-            margin-right: 20px;
+            /* margin-top: 10px; */
+        }
+
+        .menu_list > li {
+            line-height: 30px;
+            padding: 0 9px 0 10px;
+        }
+
+        .menu_list > li > a {
+            color: black;
+            /* font-weight: bold; */
+        }
+
+        .header_inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180px;
         }
 
         ul li {
@@ -67,7 +92,7 @@
             margin-right: 50px;
             display: block;
             width: 20%;
-            z-index: 1;
+            /* z-index: 1; */
         }
         .main_logo a span {
             color: #b4e4ff;
@@ -103,31 +128,23 @@
             background-color: #b4e4ff;
         }
         
-        main nav {
+        .nav_items{
             width: 100%;
-            height: 50px;
-            background-color: #F7C8E0;
-        }
-        .nav_items {
-            width: 100%;
-            height: 100px;
+            /* height: 100px; */
             /* align-items: center; */
             font-size: 30px;
-        }
-        .nav_items ul {
-            width: 100%;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
-        .nav_items ul li  {
-            display: inline-block;
-            width: 33.3%;
-            text-align: center;
-            /* color: white; */
+        .nav_items  ul  a {
+            color: black;
         }
-        .nav_items ul a {
-            color: white;
+
+        #main_category > li {
+            margin-left: 100px;
         }
+
         .main_msg {
             width: 100%;
             height: 200px;
@@ -156,20 +173,15 @@
             border: none;
         }
         a > img {
-            margin-top: 10px;
+            /* margin-top: 10px; */
         }
 
         .img_slide {
-            width: 600px;
-            height: 300px;
+            /* width: 600px;
+            height: 300px; */
             overflow: hidden;
             margin-top: 10px;
             /* display: none; */
-        }
-
-        img {
-            width: 600px;
-            height: 300px;
         }
 
         legend {
@@ -189,63 +201,127 @@
             font-weight: normal;
             font-style: normal;
         }
+
+        .main_category {
+            display: none;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+
+        #category_list:hover {
+            cursor: pointer;
+            background-color: lightgray;
+            border-radius: 6px;
+        }
+        #category_list:hover .main_category{
+            /* color: #b4e4ff;
+            cursor: pointer; */
+            display: block;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .main_category {
+            width: 170px;
+        }
+
+        .main_category li {
+            display: block;
+            font-size: 16px;
+            height: 28px;
+            text-align: left;
+        }
+        .main_banner {
+            width: 100%;
+            height: 450px;
+            background-color: black;
+        }
+        .img_list > a > img {
+            position: absolute;
+            /* width: 100%; */
+            left: -30%;
+        }
+        a > p {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            font-size: 48px;
+            color: black;
+        }
     </style>
     <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="links">
-        <ul>
-            <li><a href="join.html">회원가입</a></li>
-            <li><a href=""><i class="fa-solid fa-cart-shopping"></i>장바구니</a></li>
-            <li><a href="">고객센터</a></li>
-        </ul>
-    </div>
     <header>
-        <!-- <div class="links">
-            <ul>
+        <div class="top_nav">
+            <ul class="menu_list" id="menu_list_header">
                 <li><a href="join.html">회원가입</a></li>
-                <li><a href=""><i class="fa-solid fa-cart-shopping"></i>장바구니</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="">장바구니</a></li>
+                <li><a href="">주문배송</a></li>
                 <li><a href="">고객센터</a></li>
             </ul>
-        </div> -->
-        <div class="main_logo">
-            <a href="main.html">
-            <i class="fa-solid fa-rocket" style="color: #b4e4ff; font-size: 60px;"></i>
-            <span>메인로고</span></a>
         </div>
-        <form action="">
-            <fieldset>
-                <legend>검색</legend>
-                <div class="search_box">
-                    <input type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
-                    <button type="submit">
-                        <i class="fa-solid fa-magnifying-glass" style="font-size: 30px; color:white;"></i>
-                    </button>
-                </div>
-            </fieldset>
-        </form>
-        <div class="login">
-            <p class="login_msg">ㅇㅇㅇㅇ을 더 안전하고 편리하게 이용하세요</p>
-            <button class="login_btn" onclick="location.href='login.html'">
-                <span style="color: white; font-size: 20px; font-weight: bold;">로그인</span>
-            </button>
-            <!-- <a id="kakao-login-btn" href="javascript:loginWithKakao()">
-                <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" style="width: 250px; height: 48px;" alt="카카오 로그인 버튼" />
-              </a> -->
+        <div class="header_inner">
+            <div class="main_logo">
+                <a href="main.html">
+                <i class="fa-solid fa-rocket" style="color: #b4e4ff; font-size: 60px;"></i>
+                <span>메인로고</span></a>
+            </div>
+            <form action="">
+                <fieldset>
+                    <legend>검색</legend>
+                    <div class="search_box">
+                        <input type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass" style="font-size: 30px; color:white;"></i>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- <div class="login">
+                <p class="login_msg">ㅇㅇㅇㅇ을 더 안전하고 편리하게 이용하세요</p>
+                <button class="login_btn" onclick="location.href='login.html'">
+                    <span style="color: white; font-size: 20px; font-weight: bold;">로그인</span>
+                </button>
+            </div> -->
         </div>
     </header>
     <main>
-        <nav>
-            <div class="nav_items">
-                <ul>
-                    <li><a href="share.html">나눔</a></li>
-                    <li><a href="sale.html">판매</a></li>
-                    <li><a href="buying.html">구매</a></li>
-                </ul>
-            </div>
+        <nav class="nav_items">
+            <ul id="main_category">
+                <li id="category_list"><i class="fa-solid fa-bars"></i>카테고리
+                    <ul class="main_category">
+                        <li><a href="test.html">c1</a></li>
+                        <li>c2</li>
+                        <li>c3</li>
+                    </ul>
+                </li>
+                <li><a href="">test</a></li>
+                <li><a href="">test</a></li>
+                <li><a href="">test</a></li>
+                <li><a href="">test</a></li>
+            </ul>
         </nav>
-        <div class="main_msg">
+        <div class="main_banner">
+            <div class="img_slide">
+                <div class="img_list">
+                    <a href="join.html">
+                        <img class="img_item" src="https://image.oliveyoung.co.kr/uploads/images/display/90000010001/1/6813353655270153161.jpg">
+                            <p>test
+                                test
+                                <br>
+                                test
+                            </p>
+                    </a>
+                    <a><img class="img_item" src="https://image.oliveyoung.co.kr/uploads/images/display/90000010001/1/8848515238254055169.jpg"></a>
+                    <a><img class="img_item" src="https://image.oliveyoung.co.kr/uploads/images/display/90000010001/1/3610331146117993572.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="main_msg">
             <span style="color: white; font-family: GmarketSansMedium; font-size: 60px;"> test<br>
             test</span>
             <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, nulla minus perspiciatis qui ratione nemo quae aliquam repellat reiciendis</p>
@@ -256,65 +332,27 @@
             <button id="btn_buy">구매</button>
         </div>
         <div class="img_slide">
-            <!-- <ul class="img_list"> -->
-                <!-- <li class="img_item"><img src="img/camera.png"></li>
-                <li class="img_item"><img src="img/apples.jpg"></li>
-                <li class="img_item"><img src="img/dog.jpg"></li> -->
             <div class="share_list">
                 <img class="share_item" src="img/camera.png">
                 <img class="share_item" src="img/apples.jpg">
                 <img class="share_item" src="img/dog.jpg">
             </div>
-            <!-- </ul> -->
             <div class="sell_list">
                 <img class="sell_item" src="img/notebook.jpg">
                 <img class="sell_item" src="img/ddalgi.jpg">
                 <img class="sell_item" src="img/bag.jpg">
             </div>
-        </div>
+        </div> -->
     </main>
     <footer></footer>
     <script>
         window.onload = () => {
             let index = 0;
-            const share_btn = document.getElementById('btn_share');
-            const sell_btn = document.getElementById('btn_sell');
-            const buy_btn = document.getElementById('btn_buy');
-            const share_list = document.getElementsByClassName('share_list');
-            const sell_list = document.getElementsByClassName('sell_list');
-            const share_item = document.getElementsByClassName('share_item');
-            const sell_item = document.getElementsByClassName('sell_item');
-            let time;
-            share_btn.addEventListener('click', function(){
-                sell_list[0].style.display = 'none';
-                share_list[0].style.display = 'block';
-                index = 0;
-                slideShow(1);
-                clearInterval(time);
-                time = setInterval(slideShow, 2000);
-            });
-            sell_btn.addEventListener('click', function(){
-                share_list[0].style.display = 'none';
-                sell_list[0].style.display = 'block';
 
-                index = 0;
-                clearInterval(time);
-                slideShow(2);
-                time = setInterval(slideShow, 2000);
-            });
+            slideShow();
 
-            let x;
-            // let index = 0;
-            function slideShow(img_num) {
-                // const x;
-                
-                if(img_num == 1) {
-                    // const x = document.getElementsByClassName('share_item');
-                    x = share_item;
-                } else if(img_num == 2) {
-                    x = sell_item;
-                }
-                // const x = img_items;
+            function slideShow() {
+                const x = document.getElementsByClassName('img_item');
                 for(let i = 0; i < x.length; i++) {
                     x[i].style.display = 'none';
                 }
@@ -323,51 +361,59 @@
                     index = 1;
                 }
                 x[index -1].style.display = 'block'
-                // setTimeout(slideShow, 2000);
-                // setInterval(slideShow, 1500);
+                setTimeout(slideShow, 3000);
             };
+
+            // let index = 0;
+            // const share_btn = document.getElementById('btn_share');
+            // const sell_btn = document.getElementById('btn_sell');
+            // const buy_btn = document.getElementById('btn_buy');
+            // const share_list = document.getElementsByClassName('share_list');
+            // const sell_list = document.getElementsByClassName('sell_list');
+            // const share_item = document.getElementsByClassName('share_item');
+            // const sell_item = document.getElementsByClassName('sell_item');
+            // let time;
+            // share_btn.addEventListener('click', function(){
+            //     sell_list[0].style.display = 'none';
+            //     share_list[0].style.display = 'block';
+            //     index = 0;
+            //     slideShow(1);
+            //     clearInterval(time);
+            //     time = setInterval(slideShow, 2000);
+            // });
+            // sell_btn.addEventListener('click', function(){
+            //     share_list[0].style.display = 'none';
+            //     sell_list[0].style.display = 'block';
+
+            //     index = 0;
+            //     clearInterval(time);
+            //     slideShow(2);
+            //     time = setInterval(slideShow, 2000);
+            // });
+
+            // let x;
+            // // let index = 0;
+            // function slideShow(img_num) {
+            //     // const x;
+                
+            //     if(img_num == 1) {
+            //         // const x = document.getElementsByClassName('share_item');
+            //         x = share_item;
+            //     } else if(img_num == 2) {
+            //         x = sell_item;
+            //     }
+            //     // const x = img_items;
+            //     for(let i = 0; i < x.length; i++) {
+            //         x[i].style.display = 'none';
+            //     }
+            //     index++;
+            //     if(index > x.length) {
+            //         index = 1;
+            //     }
+            //     x[index -1].style.display = 'block'
+            // };
         }
     </script>
-    <!-- <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
-    integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx" crossorigin="anonymous"></script>
-  <script>
-    Kakao.init('c089c8172def97eb00c07217cae17495'); // 사용하려는 앱의 JavaScript 키 입력
-  </script>
-  
-  <p id="token-result"></p>
-  
-  <script>
-    function loginWithKakao() {
-      Kakao.Auth.authorize({
-        redirectUri: 'https://developers.kakao.com/tool/demo/oauth',
-      });
-    }
-  
-    // 아래는 데모를 위한 UI 코드입니다.
-    displayToken()
-    function displayToken() {
-      var token = getCookie('authorize-access-token');
-  
-      if(token) {
-        Kakao.Auth.setAccessToken(token);
-        Kakao.Auth.getStatusInfo()
-          .then(function(res) {
-            if (res.status === 'connected') {
-              document.getElementById('token-result').innerText
-                = 'login success, token: ' + Kakao.Auth.getAccessToken();
-            }
-          })
-          .catch(function(err) {
-            Kakao.Auth.setAccessToken(null);
-          });
-      }
-    }
-  
-    function getCookie(name) {
-      var parts = document.cookie.split(name + '=');
-      if (parts.length === 2) { return parts[1].split(';')[0]; }
-    }
-  </script> -->
 </body>
 
 </html>
