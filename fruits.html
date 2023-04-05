@@ -29,6 +29,7 @@
             /* display: flex; */
             /* flex-direction: column; */
             /* align-items: center; */
+            text-align: center;
         }
 
         footer {
@@ -309,6 +310,31 @@
             color: rgb(153, 153, 153);
             margin-bottom: 40px;
         }
+
+        .container {
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: left;
+            /* flex-direction: row; */
+            width: 100%;
+            flex-wrap: wrap;
+            padding-left: 107px;
+            padding-right: 107px;
+            margin-top: 20px;
+        }
+
+        .fruits_link {
+            width: 250px;
+            height: 538px;
+            color: black;
+            margin-left: 10px;
+        }
+
+        .fruits_img {
+            width: 250px;
+            height: 320px;
+        }
+
     </style>
     <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script>
 </head>
@@ -364,7 +390,7 @@
                         <li class="category_item">과일•견과•쌀
                             <ul class="sub_category">
                                 <li>친환경</li>
-                                <a href="fruits.html"><li>제철과일</li></a>
+                                <li>제철과일</li>
                             </ul>
                         </li>
                         <li class="category_item">수산•해산•건어물</li>
@@ -394,46 +420,97 @@
                 <li><a href="">브랜드관</a></li>
             </ul>
         </nav>
-        <div class="main_banner">
-            <div class="img_slide">
-                <div class="img_list">
-                    <a href="" onclick="return false">
-                        <img class="img_item" src="img/real_main.png" alt="메인">
-                    </a>
-                    <a href="">
-                        <img class="img_item" src="img/real_strawberry.png" alt="딸기">
-                    </a>
-                    <a href="">
-                        <img class="img_item" src="img/real_banana.png" alt="바나나">
-                    </a>
-                    <a href="">
-                        <img class="img_item" src="img/real_melon.png" alt="수박">
-                    </a>
+        <img src="img/real_fruits.png" alt="과일배너" style="margin-top: 10px;">
+        <div class="container">
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/strawberry.jpg" alt="딸기" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>유명산지 설향딸기 500g</span>
+                        <p>유명산지에서 전하는 제철 딸기</p>
+                        <span>12,990원</span>
+                    </div>
                 </div>
-            </div>
+            </a>
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/apple.jpg" alt="사과" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>청송 사과 1.5kg(5~7입)</span>
+                        <p>사과의 유명산지 청송에서 온 새콤달콤한 선물</p>
+                        <span>11,990원</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/oranges.jpg" alt="오렌지" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>설국향</span>
+                        <p>입안 가득 터지는 진한 달콤함</p>
+                        <span>13,900원</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/blueberry.jpg" alt="블루베리" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>국산 블루베리 100g(특)</span>
+                        <p>신선하게 즐기는 보랏빛 달콤함</p>
+                        <span>9,900원</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/shine.jpg" alt="샤인머스캣" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>향기가득 샤인머스캣 700g</span>
+                        <p>달콤한 향미 가득 연둣빛 포도</p>
+                        <span>21,900원</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/k_melon.jpg" alt="참외" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>고당도 성주참외 600g(2입)</span>
+                        <p>아삭아삭 달콤한 참외</p>
+                        <span>9,900원</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/tomato.jpg" alt="토마토" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>완숙토마토 2kg</span>
+                        <p>쫀득한 과육에서 전해지는 달콤함</p>
+                        <span>8,900원</span>
+                    </div>
+                </div>
+            </a>
+            <a href="/goods/1" class="fruits_link">
+                <div class="fruits_item">
+                    <img src="img/avocado.jpg" alt="아보카도" class="fruits_img">
+                    <div class="fruits_info">
+                        <p>우주배송</p>
+                        <span>아보카도(1개)</span>
+                        <p>숲속의 버터</p>
+                        <span>1,995원</span>
+                    </div>
+                </div>
+            </a>
         </div>
-        <!-- <div class="main_msg">
-            <span style="color: white; font-family: GmarketSansMedium; font-size: 60px;"> test<br>
-            test</span>
-            <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, nulla minus perspiciatis qui ratione nemo quae aliquam repellat reiciendis</p>
-        </div>
-        <div class="btn_group">
-            <button id="btn_share">나눔</button>
-            <button id="btn_sell">판매</button>
-            <button id="btn_buy">구매</button>
-        </div>
-        <div class="img_slide">
-            <div class="share_list">
-                <img class="share_item" src="img/camera.png">
-                <img class="share_item" src="img/apples.jpg">
-                <img class="share_item" src="img/dog.jpg">
-            </div>
-            <div class="sell_list">
-                <img class="sell_item" src="img/notebook.jpg">
-                <img class="sell_item" src="img/ddalgi.jpg">
-                <img class="sell_item" src="img/bag.jpg">
-            </div>
-        </div> -->
     </main>
     <hr>
     <footer>
@@ -496,40 +573,6 @@
     </footer>
     <script>
         window.onload = () => {
-            let index = 0;
-            const x = document.getElementsByClassName('img_item');
-
-            slideShow();
-
-            function slideShow() {
-                // const x = document.getElementsByClassName('img_item');
-                for(let i = 0; i < x.length; i++) {
-                    x[i].style.display = 'none';
-                }
-                index++;
-                if(index > x.length) {
-                    index = 1;
-                }
-                x[index -1].style.display = 'block'
-                // let time = setTimeout(slideShow, 3000);
-                // x[index -1].addEventListener("mouseover", function() {
-                //     clearTimeout(time);
-                // });
-                // x[index -1].addEventListener("mouseout", function() {
-                //     console.log('마우스 아웃');
-
-                //     time = setTimeout(slideShow, 3000);
-                // });
-                setTimeout(slideShow, 3000);
-                // for(let i=0; i<x.length; i++){
-                //     x[i].addEventListener("mouseover", function(){
-                //         clearTimeout(slideShow());
-                //     });
-                //     x[i].addEventListener("mouseout", function(){
-                //         setTimeout(slideShow, 1000);
-                //     });
-                // }
-            };
             const category_list = document.querySelectorAll('.category_item');
             const sub_list = document.querySelectorAll('.sub_category');
             console.log(category_list);
@@ -544,55 +587,6 @@
                     sub_list[i].setAttribute('style', 'display:none;');
                 });
             }
-
-            // let index = 0;
-            // const share_btn = document.getElementById('btn_share');
-            // const sell_btn = document.getElementById('btn_sell');
-            // const buy_btn = document.getElementById('btn_buy');
-            // const share_list = document.getElementsByClassName('share_list');
-            // const sell_list = document.getElementsByClassName('sell_list');
-            // const share_item = document.getElementsByClassName('share_item');
-            // const sell_item = document.getElementsByClassName('sell_item');
-            // let time;
-            // share_btn.addEventListener('click', function(){
-            //     sell_list[0].style.display = 'none';
-            //     share_list[0].style.display = 'block';
-            //     index = 0;
-            //     slideShow(1);
-            //     clearInterval(time);
-            //     time = setInterval(slideShow, 2000);
-            // });
-            // sell_btn.addEventListener('click', function(){
-            //     share_list[0].style.display = 'none';
-            //     sell_list[0].style.display = 'block';
-
-            //     index = 0;
-            //     clearInterval(time);
-            //     slideShow(2);
-            //     time = setInterval(slideShow, 2000);
-            // });
-
-            // let x;
-            // // let index = 0;
-            // function slideShow(img_num) {
-            //     // const x;
-                
-            //     if(img_num == 1) {
-            //         // const x = document.getElementsByClassName('share_item');
-            //         x = share_item;
-            //     } else if(img_num == 2) {
-            //         x = sell_item;
-            //     }
-            //     // const x = img_items;
-            //     for(let i = 0; i < x.length; i++) {
-            //         x[i].style.display = 'none';
-            //     }
-            //     index++;
-            //     if(index > x.length) {
-            //         index = 1;
-            //     }
-            //     x[index -1].style.display = 'block'
-            // };
         }
     </script>
 </body>
