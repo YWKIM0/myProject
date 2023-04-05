@@ -309,6 +309,13 @@
             color: rgb(153, 153, 153);
             margin-bottom: 40px;
         }
+        .cart_title {
+            text-align: center;
+            padding: 50px 0 48px;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 35px;;
+        }
     </style>
     <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script>
 </head>
@@ -395,46 +402,7 @@
                 <li><a href="">브랜드관</a></li>
             </ul>
         </nav>
-        <div class="main_banner">
-            <div class="img_slide">
-                <div class="img_list">
-                    <a href="" onclick="return false">
-                        <img class="img_item" src="img/real_main.png" alt="메인">
-                    </a>
-                    <a href="">
-                        <img class="img_item" src="img/real_strawberry.png" alt="딸기">
-                    </a>
-                    <a href="">
-                        <img class="img_item" src="img/real_banana.png" alt="바나나">
-                    </a>
-                    <a href="">
-                        <img class="img_item" src="img/real_melon.png" alt="수박">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="main_msg">
-            <span style="color: white; font-family: GmarketSansMedium; font-size: 60px;"> test<br>
-            test</span>
-            <p style="color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, nulla minus perspiciatis qui ratione nemo quae aliquam repellat reiciendis</p>
-        </div>
-        <div class="btn_group">
-            <button id="btn_share">나눔</button>
-            <button id="btn_sell">판매</button>
-            <button id="btn_buy">구매</button>
-        </div>
-        <div class="img_slide">
-            <div class="share_list">
-                <img class="share_item" src="img/camera.png">
-                <img class="share_item" src="img/apples.jpg">
-                <img class="share_item" src="img/dog.jpg">
-            </div>
-            <div class="sell_list">
-                <img class="sell_item" src="img/notebook.jpg">
-                <img class="sell_item" src="img/ddalgi.jpg">
-                <img class="sell_item" src="img/bag.jpg">
-            </div>
-        </div> -->
+        <h2 class="cart_title">장바구니</h2>
     </main>
     <hr>
     <footer>
@@ -545,55 +513,6 @@
                     sub_list[i].setAttribute('style', 'display:none;');
                 });
             }
-
-            // let index = 0;
-            // const share_btn = document.getElementById('btn_share');
-            // const sell_btn = document.getElementById('btn_sell');
-            // const buy_btn = document.getElementById('btn_buy');
-            // const share_list = document.getElementsByClassName('share_list');
-            // const sell_list = document.getElementsByClassName('sell_list');
-            // const share_item = document.getElementsByClassName('share_item');
-            // const sell_item = document.getElementsByClassName('sell_item');
-            // let time;
-            // share_btn.addEventListener('click', function(){
-            //     sell_list[0].style.display = 'none';
-            //     share_list[0].style.display = 'block';
-            //     index = 0;
-            //     slideShow(1);
-            //     clearInterval(time);
-            //     time = setInterval(slideShow, 2000);
-            // });
-            // sell_btn.addEventListener('click', function(){
-            //     share_list[0].style.display = 'none';
-            //     sell_list[0].style.display = 'block';
-
-            //     index = 0;
-            //     clearInterval(time);
-            //     slideShow(2);
-            //     time = setInterval(slideShow, 2000);
-            // });
-
-            // let x;
-            // // let index = 0;
-            // function slideShow(img_num) {
-            //     // const x;
-                
-            //     if(img_num == 1) {
-            //         // const x = document.getElementsByClassName('share_item');
-            //         x = share_item;
-            //     } else if(img_num == 2) {
-            //         x = sell_item;
-            //     }
-            //     // const x = img_items;
-            //     for(let i = 0; i < x.length; i++) {
-            //         x[i].style.display = 'none';
-            //     }
-            //     index++;
-            //     if(index > x.length) {
-            //         index = 1;
-            //     }
-            //     x[index -1].style.display = 'block'
-            // };
         }
     </script>
 </body>

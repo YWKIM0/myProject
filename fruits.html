@@ -13,7 +13,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         header {
             width: 100%;
             height: 210px;
@@ -335,6 +335,58 @@
             height: 320px;
         }
 
+        .img_container {
+            position: relative;
+        }
+        .kart_img {
+            position: absolute;
+            right: 10px;
+            bottom: 55px;
+            z-index: 10;
+            height: 0px;
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width:30%;
+            margin-left:-10%;
+            height: 300px;
+            margin-top: -200px;
+            z-index: 1000;
+            background: white;
+            border: 1px solid #d1d8dd;
+            box-shadow: 0 0 6px 1px rgb(0 0 0 / 30%);
+            border-radius: 6px;
+     }
+     .popup_container {
+        margin: 30px;
+        /* display: flex; */
+        text-align: center;
+     }
+
+     .popup_btn {
+        width: 45%;
+        height: 50px;
+        display: inline;
+        border: none;
+        margin-top: 70px;
+     }
+     .popup_text {
+        text-align: left;
+     }
+     .cnt_btn {
+        width: 40px;
+        border: none;
+        font-size: 20px;
+        background-color: transparent;
+        cursor: pointer;
+     }
     </style>
     <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script>
 </head>
@@ -424,13 +476,21 @@
         <div class="container">
             <a href="/goods/1" class="fruits_link">
                 <div class="fruits_item">
-                    <img src="img/strawberry.jpg" alt="딸기" class="fruits_img">
+                    <div class="img_container">
+                        <img src="img/strawberry.jpg" alt="딸기" class="fruits_img">
+                        <div>
+                            <button type="button" class="kart_img" onclick="return false">
+                                <img src="img/kart.svg" alt="장바구니" class="add_kart">
+                            </button>
+                        </div>
+                    </div>        
                     <div class="fruits_info">
                         <p>우주배송</p>
                         <span>유명산지 설향딸기 500g</span>
                         <p>유명산지에서 전하는 제철 딸기</p>
                         <span>12,990원</span>
                     </div>
+                    
                 </div>
             </a>
             <a href="/goods/1" class="fruits_link">
@@ -512,6 +572,17 @@
             </a>
         </div>
     </main>
+    <div class="popup">
+        <div class="popup_container">
+            <p class="popup_text">유명산지 설향딸기 500g</p>
+            <div  class="popup_text" style="margin-top: 20px;"><span>12,990</span>원
+                <button class="cnt_btn" style="margin-left: 100px;">-</button> <span>1</span> <button class="cnt_btn">+</button>
+            </div>
+            <br>
+            <button class="close popup_btn">취소</button>
+            <button class="popup_btn" style="background-color: #b4e4ff;">장바구니 담기</button>
+        </div>
+    </div>
     <hr>
     <footer>
         <div class="footer_container">
@@ -571,7 +642,11 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+        // function add_kart() {
+        //         alert('카트에 담자');
+        //     }
         window.onload = () => {
             const category_list = document.querySelectorAll('.category_item');
             const sub_list = document.querySelectorAll('.sub_category');
@@ -587,6 +662,15 @@
                     sub_list[i].setAttribute('style', 'display:none;');
                 });
             }
+
+            const kart_btn = document.querySelector('.add_kart');
+            kart_btn.addEventListener('click', function(){
+                $('.popup').show();
+            });
+
+            $('.close').click(function (e) {
+                $('.popup').hide();
+            })
         }
     </script>
 </body>
