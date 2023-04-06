@@ -309,62 +309,37 @@
             color: rgb(153, 153, 153);
             margin-bottom: 40px;
         }
-        .cart_title {
+
+        .goods_container {
+            width: 100%;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .goods {
+            width: 45%;
+            height: 600px;
+            /* background-color: #00235B; */
             text-align: center;
-            padding: 50px 0 48px;
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 35px;;
         }
-        .cart_container {
-            width: 100%;
-            /* background-color: lightgray; */
-            min-height: 500px;
-            display: flex;
-            justify-content: center;
+        .goods > img {
+            width: 430px;
+            height: 550px;
         }
-        .cart_list {
-            width: 65%;
-            height: 700px;
+        .goods_info {
+            width: 45%;
             /* background-color: #F7C8E0; */
+            height: 500px;
+            padding: 20px 20px;
         }
-        .cart_item {
+        .goods_exp {
             display: flex;
-            align-items: center;
-            padding: 20px 0;
-            justify-content: center;
-
+            flex-direction: column;
         }
-        .count_area {
-            display: inline-flex;
-            align-items: center;
-            border: 1px solid rgb(221, 223, 225);
-            /* width: 88px; */
-            border-radius: 3px;
-
-
-        }
-        .count_btn {
-            width: 28px;
-            height: 28px;
-            border: none;
-            color: transparent;
-            background-size: cover;
-            background-color: transparent;
-            cursor: pointer;
-        }
-        .pay_container {
-            width: 25%;
-            height: 230px;
-            background-color: lightgray;
-        }
-        .pay_info {
-            width: 100%;
-            padding: 20px;
-        }
-        .pay_item {
+        .goods_exp > li {
+            margin-top: 40px;
             display: flex;
-            justify-content: space-between;
         }
     </style>
     <!-- <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script> -->
@@ -446,46 +421,46 @@
                 <li><a href="">브랜드관</a></li>
             </ul>
         </nav>
-        <h2 class="cart_title">장바구니</h2>
-        <div class="cart_container">
-            <div class="cart_list">
-                <ul>
-                    <li class="cart_item">
-                        <a href="">
-                            <img src="img/strawberry.jpg" alt="딸기" style="width: 60px; height:78px; margin-right: 20px;">
-                        </a>
-                        <!-- <img src="img/strawberry.jpg" alt=""> -->
-                        <div style="width: 340px;">친환경 설향 딸기 500g</div>
-                        <div class="count_area">
-                            <button class="count_btn" style="background-image: url(img/minus.svg);"></button>
-                            <div>1</div>
-                            <button class="count_btn" style="background-image: url(img/plus.svg);"></button>
-                        </div>
-                        <div style="width: 130px; text-align: right;">12,990원</div>
-                        <button class="count_btn" style="background-image: url(img/x자.svg);"></button>
-                        <!-- <img src="img/x자.svg" alt=""> -->
-                    </li>
-                    <!-- <li></li>
-                    <li></li>
-                    <li></li> -->
-                </ul>
+        <div class="goods_container">
+            <div class="goods">
+                <img src="img/strawberry.jpg" alt="">
             </div>
-            <div class="pay_container">
-                <div class="pay_info">
-                    <div class="pay_item">
-                        <span>상품금액</span>
-                        <span>12,990<span>원</span></span>
-                    </div>
-                    <div class="pay_item" style="padding-top: 15px;">
-                        <span>배송비</span>
-                        <span>+ 3000<span>원</span></span>
-                    </div>
-                    <div class="pay_item" style="padding-top: 15px;">
-                        <span>결제예정금액</span>
-                        <span>15,990<span>원</span></span>
-                    </div>
-                    <button style="width: 100%; height: 50px; border: 0px none; margin-top: 30px;">구매하기</button>
-                </div>
+            <div class="goods_info">
+                <p>우주배송</p>
+                <h1>친환경 설향 딸기 500g</h1>
+                <p>촉촉하게 번지는 새콤달콤함</p>
+                <h2>
+                    <span>12,990<span>원</span></span>
+                </h2>
+                <ul class="goods_exp">
+                    <li>
+                        <div>
+                            <span>배송</span>
+                            <span>우주배송</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>판매자</span>
+                        <span>우주마켓</span>
+                    </li>
+                    <li>
+                        <span>포장타입</span>
+                        <span>냉장(종이포장)</span>
+                    </li>
+                    <li>
+                        <span>판매단위</span>
+                        <span>1팩</span>
+                    </li>
+                    <li>
+                        <span>중량/용량</span>
+                        <span>500g 내외</span>
+                    </li>
+                    <li>
+                        <span>원산지</span>
+                        <span>국내</span>
+                    </li>
+                </ul>
+                <button>장바구니 담기</button>
             </div>
         </div>
     </main>
@@ -565,15 +540,6 @@
                     sub_list[i].setAttribute('style', 'display:none;');
                 });
             }
-
-            const kart_btn = document.querySelector('.add_kart');
-            kart_btn.addEventListener('click', function(){
-                $('.popup').show();
-            });
-
-            $('.close').click(function (e) {
-                $('.popup').hide();
-            })
         }
     </script>
 </body>
