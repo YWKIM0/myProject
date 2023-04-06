@@ -18,6 +18,32 @@
             height: 213px;
             background-color: #DFFFD8;
         }
+        .top_nav {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            font-size: 12px;
+            margin-right: 20px;
+        }
+        .menu_list {
+            position: absolute;
+            top: 0;
+            right: 0;
+            /* margin-top: 10px; */
+        }
+
+        .menu_list > li {
+            line-height: 30px;
+            padding: 0 9px 0 10px;
+        }
+
+        .menu_list > li > a {
+            color: black;
+            /* font-weight: bold; */
+        }
+        a {
+            text-decoration: none;
+        }
 
         main {
             width: 100%;
@@ -36,7 +62,7 @@
             /* color: #b4e4ff; */
             font-weight: bold;
             text-align: center;
-            padding-top: 150px;
+            padding-top: 120px;
         }
 
         .main_logo > a {
@@ -154,6 +180,15 @@
 
 <body>
     <header>
+        <div class="top_nav">
+            <ul class="menu_list" id="menu_list_header">
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="">장바구니</a></li>
+                <li><a href="">주문배송</a></li>
+                <li><a href="">고객센터</a></li>
+            </ul>
+        </div>
         <div class="main_logo">
             <a href="main.html">
             <img src="img/alien_2.png" alt="">
