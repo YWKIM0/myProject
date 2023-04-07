@@ -27,17 +27,13 @@
             position: absolute;
             top: 0;
             right: 0;
-            /* margin-top: 10px; */
         }
-
         .menu_list > li {
             line-height: 30px;
             padding: 0 9px 0 10px;
         }
-
         .menu_list > li > a {
             color: black;
-            /* font-weight: bold; */
         }
         a {
             text-decoration: none;
@@ -49,7 +45,6 @@
             justify-content: center;
             background-image: url(img/space.jpg);
         }
-
         .main_logo {
             font-size: 40px;
             font-family: GmarketSansMedium;
@@ -58,17 +53,14 @@
             text-align: center;
             padding-top: 120px;
         }
-
         .main_logo > a {
             color: #b4e4ff;
             text-decoration: none;
         }
-
         .main_logo > a > img {
             width: 40px;
             height: 40px;
         }
-
         .login {
             width: 500px;
             height: 380px;
@@ -76,45 +68,34 @@
             margin-top: 60px;
             border-radius: 6px;
         }
-
         .login h2 {
             font-size: 35px;
             color: white;
             margin: 20px;
         }
-        
         #login_form input {
             width: 90%;
             height: 48px;
             padding: 0 10px;
             margin-bottom: 10px;
-            /* border-radius: 5px; */
             border: 2px solid white;
             border-radius: 6px;
             margin-left: 20px;
         }
-        
         .login > div {
             margin-left: 20px;
         }
-
         .login > div > a {
-            /* margin-left: 20px; */
-            /* width: 100%; */
             text-decoration: none;
         }
-
         .login > div > a > img {
-            /* width: 45%; */
             width: 230px;
             height: 48px;
         }
-
         input:focus {
             outline: none;
             box-shadow: 0 0 10px #00235B;
         }
-
         .error_msg {
             width: 90%;
             height: 20px;
@@ -122,43 +103,34 @@
             margin-left: 20px;
             margin-bottom: 10px;
         }
-
         #login_form input[type='submit']{
             background-color: #F7C8E0;
             font-size: 16px;
             color: #95BDFF;
             font-weight: bold;
         }
-
         .kakao {
-            /* width: 100%; */
             display: flex;
             align-items: center;
         }
-
         .kakao > p {
             width: 45%;
             font-size: 12px;
             color: black;
         }
-
         @font-face {
             font-family: 'GmarketSansMedium';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
         footer {
             height: 310px;
-            /* background-color: darkgray; */
         }
-
         .footer_left_item {
             display: flex;
             flex-direction: row;
         }
-
         .footer_btn {
             width: 140px;
             height: 40px;
@@ -167,30 +139,23 @@
             text-align: center;
             margin-right: 16px;
             margin-bottom: 16px;
-
         }
-
         .footer_container {
             display: flex;
             align-items: baseline;
             justify-content: center;
-
         }
-
         .footer_left {
             margin-left: 50px;
         }
-
         .footer_right {
             margin-left: 50px;
         }
-
         .footer_font {
             font-size: 12px;
             color: rgb(153, 153, 153);
             margin-bottom: 40px;
         }
-
         ul li {
             display: inline-block;
             list-style: none;
@@ -229,9 +194,6 @@
                 <a id="kakao-login-btn" href="javascript:loginWithKakao()">
                     <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" alt="카카오 로그인 버튼" />
                 </a>
-                <!-- <a>
-                    <img src="img/btnG_완성형.png" alt="네이버 로그인 버튼" style="border-radius: 6px;">
-                </a> -->
             </div>
         </div>
     </main>
@@ -302,16 +264,12 @@
                 let pw = document.getElementById('pw').value;
                 let err_msg = document.querySelector('.error_msg');
                 if(id == '') {
-                    // alert('공백!');
                     err_msg.textContent = '아이디를 입력해주세요!';
                 } else if (pw == '') {
                     err_msg.textContent = '비밀번호를 입력해주세요!';
                 } else {
                     location.href='login_ok.html';
                 }
-                // if(id != '' && pw == '') {
-                //     err_msg.textContent = '비밀번호를 입력해주세요!';
-                // }
             });
         }
     </script>
@@ -329,8 +287,7 @@
         redirectUri: 'https://developers.kakao.com/tool/demo/oauth',
       });
     }
-  
-    // 아래는 데모를 위한 UI 코드입니다.
+      // 아래는 데모를 위한 UI 코드입니다.
     displayToken()
     function displayToken() {
       var token = getCookie('authorize-access-token');
@@ -349,8 +306,7 @@
           });
       }
     }
-  
-    function getCookie(name) {
+      function getCookie(name) {
       var parts = document.cookie.split(name + '=');
       if (parts.length === 2) { return parts[1].split(';')[0]; }
     }

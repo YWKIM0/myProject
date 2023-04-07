@@ -13,39 +13,22 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         header {
             width: 100%;
             height: 210px;
-            /* background-color: #DFFFD8; */
-            /* display: flex;
-            align-items: center;
-            justify-content: center; */
-            /* background-image: url(img/space.jpg); */
         }
-
         main {
             min-height: 900px;
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* align-items: center; */
         }
-
         footer {
             height: 310px;
-            /* background-color: darkgray; */
         }
-
         fieldset {
             border: none;
         }
-
         a {
             text-decoration: none;
-            /* color: white;
-            font-weight: bold; */
         }
-
         .top_nav {
             position: relative;
             width: 100%;
@@ -53,56 +36,44 @@
             font-size: 12px;
             margin-right: 20px;
         }
-
         .menu_list {
             position: absolute;
             top: 0;
             right: 0;
-            /* margin-top: 10px; */
         }
-
         .menu_list > li {
             line-height: 30px;
             padding: 0 9px 0 10px;
         }
-
         .menu_list > li > a {
             color: black;
-            /* font-weight: bold; */
         }
-
         .header_inner {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 180px;
         }
-
         ul li {
             display: inline-block;
             list-style: none;
         }
-
         .main_logo {
             font-size: 40px;
             font-family: GmarketSansMedium;
-            /* color: #b4e4ff; */
             font-weight: bold;
             padding-left: 20px;
             margin-right: 50px;
             display: block;
             width: 20%;
-            /* z-index: 1; */
         }
         .main_logo a span {
             color: #b4e4ff;
         }
-
         .main_logo > a > img {
             width: 40px;
             height: 40px;
         }
-
         .search_box {
             width: 580px;
             height: 52px;
@@ -110,7 +81,6 @@
             display: flex;
             align-items: center;
         }
-
         .search_box input {
             flex: 9;
             height: 46px;
@@ -119,12 +89,10 @@
             border: none;
             font-size: 18px;
         }
-
         input:focus {
             outline: none;
             box-shadow: 0 0 10px #00235B;
         }
-
         .search_box button {
             flex: 1;
             height: 52px;
@@ -132,11 +100,8 @@
             outline: none;
             background-color: #b4e4ff;
         }
-        
         .nav_items{
             width: 100%;
-            /* height: 100px; */
-            /* align-items: center; */
             font-size: 30px;
             display: flex;
             align-items: center;
@@ -145,54 +110,9 @@
         .nav_items  ul  a {
             color: black;
         }
-
-        #main_category > li {
-            margin-left: 100px;
-        }
-
-        /* .main_msg {
-            width: 100%;
-            height: 200px;
-            background-image: url(img/space.jpg);
-        } */
-        .login {
-            width: 300px;
-            height: 150px;
-            background-color: aquamarine;
-            margin-left: 50px;
-            /* padding: 16px 16px 12px 17px; */
-            padding-top: 10px;
-            text-align: center;
-        }
-        .login_msg {
-            margin-top: 20px;
-            color: gray;
-            font-size: 12px;
-        }
-        .login_btn {
-            width: 250px;
-            height: 48px;
-            margin-top: 20px;
-            /* margin-top: 10px; */
-            background-color: #F7C8E0;
-            border: none;
-        }
-        a > img {
-            /* margin-top: 10px; */
-        }
-
-        .img_slide {
-            /* width: 600px;
-            height: 300px; */
-            overflow: hidden;
-            margin-top: 10px;
-            /* display: none; */
-        }
-
         legend {
             display: none;
         }
-
         .btn_group button {
             margin-top: 10px;
             width: 100px;
@@ -206,50 +126,58 @@
             font-weight: normal;
             font-style: normal;
         }
-
+        @font-face {
+            font-family: 'KyoboHand';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #main_category > li {
+            margin-left: 100px;
+            font-family: KyoboHand;
+        }
+        #main_category > li:hover {
+            background-color: lightgray;
+            border-radius: 6px;
+        }
         .main_category {
             display: none;
             width: 170px;
-            height: 600px;
+            height: 800px;
             background-color: white;
             position: absolute;
         }
-
         .sub_category {
             display: none;
-            width: 170px;
-            height: 100px;
+            width: 200px;
+            height: 800px;
             background-color: white;
-            /* margin-left: 200px; */
             position: absolute;
             top: 0;
             left: 170px;
         }
-
-        /* .sub_category > li {
-            display: block;
-        } */
-
         #category_list:hover {
             cursor: pointer;
             background-color: lightgray;
             border-radius: 6px;
         }
         #category_list:hover .main_category{
-            /* color: #b4e4ff;
-            cursor: pointer; */
             display: block;
-            /* position: absolute; */
-            /* z-index: 1; */
         }
-
+        .main_category > li:hover {
+            background-color: lightgray;
+        }
+        .sub_category > li:hover {
+            background-color: lightgray;
+        }
         .main_category > li, .sub_category > li {
             display: block;
             font-size: 16px;
             height: 28px;
             text-align: left;
-            margin-left: 10px;
+            padding-left: 10px;
             margin-top: 10px;
+            font-family: KyoboHand;
         }
         .main_banner {
             width: 100%;
@@ -257,27 +185,14 @@
             background-color: black;
         }
         .img_list > a > img {
-            /* position: absolute; */
             width: 100%;
-            /* left: -30%; */
             height: 450px;
-            /* overflow: hidden; */
             object-fit: cover;
-
         }
-        /* a > p {
-            position: absolute;
-            top: 40%;
-            left: 30%;
-            font-size: 48px;
-            color: black;
-        } */
-
         .footer_left_item {
             display: flex;
             flex-direction: row;
         }
-
         .footer_btn {
             width: 140px;
             height: 40px;
@@ -286,41 +201,32 @@
             text-align: center;
             margin-right: 16px;
             margin-bottom: 16px;
-
         }
-
         .footer_container {
             display: flex;
             align-items: baseline;
             justify-content: center;
-
         }
-
         .footer_left {
             margin-left: 50px;
         }
-
         .footer_right {
             margin-left: 50px;
         }
-
         .footer_font {
             font-size: 12px;
             color: rgb(153, 153, 153);
             margin-bottom: 40px;
         }
-
         .goods_container {
             width: 100%;
             display: flex;
-            /* align-items: center; */
             justify-content: center;
             margin-top: 50px;
         }
         .goods {
             width: 45%;
             height: 600px;
-            /* background-color: #00235B; */
             text-align: center;
         }
         .goods > img {
@@ -329,7 +235,6 @@
         }
         .goods_info {
             width: 45%;
-            /* background-color: #F7C8E0; */
             height: 500px;
             padding: 20px 20px;
         }
@@ -340,17 +245,24 @@
         .goods_exp > li {
             margin-top: 40px;
             display: flex;
+            justify-content: left;
+        }
+        #cart_btn {
+            width: 200px;
+            height: 50px;
+            margin-left: 300px;
+            border: 0;
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: #b4e4ff;
         }
     </style>
-    <!-- <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
     <header>
         <div class="top_nav">
             <ul class="menu_list" id="menu_list_header">
-                <!-- <li><a href="join.html">회원가입</a></li>
-                <li><a href="login.html">로그인</a></li> -->
                 <li>김회원 님</li>
                 <li><a href="main.html">로그아웃</a></li>
                 <li><a href="cart.html">장바구니</a></li>
@@ -385,13 +297,25 @@
                         <li class="category_item">채소
                             <ul class="sub_category">
                                 <li>친환경</li>
-                                <li>고구마/감자/당근</li>
+                                <li>고구마•감자•당근</li>
+                                <li>시금치•쌈채소•나물</li>
+                                <li>브로콜리•파프리카•양배추</li>
+                                <li>양파•대파•마늘•배추</li>
+                                <li>오이•호박•고추</li>
+                                <li>냉동•이색•간편채소</li>
+                                <li>콩나물•버섯</li>
                             </ul>
                         </li>
                         <li class="category_item">과일•견과•쌀
                             <ul class="sub_category">
                                 <li>친환경</li>
-                                <a href="fruits.html"><li>제철과일</li></a>
+                                <li><a href="fruits.html">제철과일</a></li>
+                                <li>국산과일</li>
+                                <li>수입과일</li>
+                                <li>간편과일</li>
+                                <li>냉동•건과일</li>
+                                <li>견과류</li>
+                                <li>쌀•잡곡</li>
                             </ul>
                         </li>
                         <li class="category_item">수산•해산•건어물</li>
@@ -434,33 +358,45 @@
                 </h2>
                 <ul class="goods_exp">
                     <li>
-                        <div>
+                        <div style="width: 100px;">
                             <span>배송</span>
-                            <span>우주배송</span>
                         </div>
+                        <span>우주배송</span>
                     </li>
                     <li>
-                        <span>판매자</span>
+                        <div style="width: 100px;">
+                            <span style="margin-right: 20px;">판매자</span>
+                        </div>
                         <span>우주마켓</span>
                     </li>
                     <li>
-                        <span>포장타입</span>
+                        <div style="width: 100px;">
+                            <span>포장타입</span>
+                        </div>
                         <span>냉장(종이포장)</span>
                     </li>
                     <li>
-                        <span>판매단위</span>
+                        <div style="width: 100px;">
+                            <span>판매단위</span>
+                        </div>
                         <span>1팩</span>
                     </li>
                     <li>
-                        <span>중량/용량</span>
+                        <div style="width: 100px;">
+                            <span>중량/용량</span>
+                        </div>
                         <span>500g 내외</span>
                     </li>
                     <li>
-                        <span>원산지</span>
+                        <div style="width: 100px;">
+                            <span>원산지</span>
+                        </div>
                         <span>국내</span>
                     </li>
+                    <li>
+                        <button id="cart_btn">장바구니 담기</button>
+                    </li>
                 </ul>
-                <button>장바구니 담기</button>
             </div>
         </div>
     </main>

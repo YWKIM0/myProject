@@ -13,39 +13,23 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         header {
             width: 100%;
             height: 210px;
-            /* background-color: #DFFFD8; */
-            /* display: flex;
-            align-items: center;
-            justify-content: center; */
-            /* background-image: url(img/space.jpg); */
         }
-
         main {
             min-height: 900px;
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* align-items: center; */
         }
-
         footer {
             height: 310px;
-            /* background-color: darkgray; */
         }
-
         fieldset {
             border: none;
         }
-
         a {
             text-decoration: none;
-            /* color: white;
-            font-weight: bold; */
+            /* font-weight: bold; */
         }
-
         .top_nav {
             position: relative;
             width: 100%;
@@ -53,56 +37,44 @@
             font-size: 12px;
             margin-right: 20px;
         }
-
         .menu_list {
             position: absolute;
             top: 0;
             right: 0;
-            /* margin-top: 10px; */
         }
-
         .menu_list > li {
             line-height: 30px;
             padding: 0 9px 0 10px;
         }
-
         .menu_list > li > a {
             color: black;
-            /* font-weight: bold; */
         }
-
         .header_inner {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 180px;
         }
-
         ul li {
             display: inline-block;
             list-style: none;
         }
-
         .main_logo {
             font-size: 40px;
             font-family: GmarketSansMedium;
-            /* color: #b4e4ff; */
             font-weight: bold;
             padding-left: 20px;
             margin-right: 50px;
             display: block;
             width: 20%;
-            /* z-index: 1; */
         }
         .main_logo a span {
             color: #b4e4ff;
         }
-
         .main_logo > a > img {
             width: 40px;
             height: 40px;
         }
-
         .search_box {
             width: 580px;
             height: 52px;
@@ -110,7 +82,6 @@
             display: flex;
             align-items: center;
         }
-
         .search_box input {
             flex: 9;
             height: 46px;
@@ -119,12 +90,10 @@
             border: none;
             font-size: 18px;
         }
-
         input:focus {
             outline: none;
             box-shadow: 0 0 10px #00235B;
         }
-
         .search_box button {
             flex: 1;
             height: 52px;
@@ -132,11 +101,8 @@
             outline: none;
             background-color: #b4e4ff;
         }
-        
         .nav_items{
             width: 100%;
-            /* height: 100px; */
-            /* align-items: center; */
             font-size: 30px;
             display: flex;
             align-items: center;
@@ -145,54 +111,9 @@
         .nav_items  ul  a {
             color: black;
         }
-
-        #main_category > li {
-            margin-left: 100px;
-        }
-
-        /* .main_msg {
-            width: 100%;
-            height: 200px;
-            background-image: url(img/space.jpg);
-        } */
-        .login {
-            width: 300px;
-            height: 150px;
-            background-color: aquamarine;
-            margin-left: 50px;
-            /* padding: 16px 16px 12px 17px; */
-            padding-top: 10px;
-            text-align: center;
-        }
-        .login_msg {
-            margin-top: 20px;
-            color: gray;
-            font-size: 12px;
-        }
-        .login_btn {
-            width: 250px;
-            height: 48px;
-            margin-top: 20px;
-            /* margin-top: 10px; */
-            background-color: #F7C8E0;
-            border: none;
-        }
-        a > img {
-            /* margin-top: 10px; */
-        }
-
-        .img_slide {
-            /* width: 600px;
-            height: 300px; */
-            overflow: hidden;
-            margin-top: 10px;
-            /* display: none; */
-        }
-
         legend {
             display: none;
         }
-
         .btn_group button {
             margin-top: 10px;
             width: 100px;
@@ -206,50 +127,58 @@
             font-weight: normal;
             font-style: normal;
         }
-
+        @font-face {
+            font-family: 'KyoboHand';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #main_category > li {
+            margin-left: 100px;
+            font-family: KyoboHand;
+        }
+        #main_category > li:hover {
+            background-color: lightgray;
+            border-radius: 6px;
+        }
         .main_category {
             display: none;
             width: 170px;
-            height: 600px;
+            height: 800px;
             background-color: white;
             position: absolute;
         }
-
         .sub_category {
             display: none;
-            width: 170px;
-            height: 100px;
+            width: 200px;
+            height: 800px;
             background-color: white;
-            /* margin-left: 200px; */
             position: absolute;
             top: 0;
             left: 170px;
         }
-
-        /* .sub_category > li {
-            display: block;
-        } */
-
         #category_list:hover {
             cursor: pointer;
             background-color: lightgray;
             border-radius: 6px;
         }
         #category_list:hover .main_category{
-            /* color: #b4e4ff;
-            cursor: pointer; */
             display: block;
-            /* position: absolute; */
-            /* z-index: 1; */
         }
-
+        .main_category > li:hover {
+            background-color: lightgray;
+        }
+        .sub_category > li:hover {
+            background-color: lightgray;
+        }
         .main_category > li, .sub_category > li {
             display: block;
             font-size: 16px;
             height: 28px;
             text-align: left;
-            margin-left: 10px;
+            padding-left: 10px;
             margin-top: 10px;
+            font-family: KyoboHand;
         }
         .main_banner {
             width: 100%;
@@ -257,27 +186,14 @@
             background-color: black;
         }
         .img_list > a > img {
-            /* position: absolute; */
             width: 100%;
-            /* left: -30%; */
             height: 450px;
-            /* overflow: hidden; */
             object-fit: cover;
-
         }
-        /* a > p {
-            position: absolute;
-            top: 40%;
-            left: 30%;
-            font-size: 48px;
-            color: black;
-        } */
-
         .footer_left_item {
             display: flex;
             flex-direction: row;
         }
-
         .footer_btn {
             width: 140px;
             height: 40px;
@@ -286,24 +202,18 @@
             text-align: center;
             margin-right: 16px;
             margin-bottom: 16px;
-
         }
-
         .footer_container {
             display: flex;
             align-items: baseline;
             justify-content: center;
-
         }
-
         .footer_left {
             margin-left: 50px;
         }
-
         .footer_right {
             margin-left: 50px;
         }
-
         .footer_font {
             font-size: 12px;
             color: rgb(153, 153, 153);
@@ -318,7 +228,6 @@
         }
         .cart_container {
             width: 100%;
-            /* background-color: lightgray; */
             min-height: 500px;
             display: flex;
             justify-content: center;
@@ -326,23 +235,18 @@
         .cart_list {
             width: 65%;
             height: 700px;
-            /* background-color: #F7C8E0; */
         }
         .cart_item {
             display: flex;
             align-items: center;
             padding: 20px 0;
             justify-content: center;
-
         }
         .count_area {
             display: inline-flex;
             align-items: center;
             border: 1px solid rgb(221, 223, 225);
-            /* width: 88px; */
             border-radius: 3px;
-
-
         }
         .count_btn {
             width: 28px;
@@ -367,7 +271,6 @@
             justify-content: space-between;
         }
     </style>
-    <!-- <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -385,7 +288,7 @@
         </div>
         <div class="header_inner">
             <div class="main_logo">
-                <a href="main.html">
+                <a href="login_ok.html">
                 <img src="img/alien_2.png" alt="">
                 <span>우주마켓</span></a>
             </div>
@@ -410,13 +313,25 @@
                         <li class="category_item">채소
                             <ul class="sub_category">
                                 <li>친환경</li>
-                                <li>고구마/감자/당근</li>
+                                <li>고구마•감자•당근</li>
+                                <li>시금치•쌈채소•나물</li>
+                                <li>브로콜리•파프리카•양배추</li>
+                                <li>양파•대파•마늘•배추</li>
+                                <li>오이•호박•고추</li>
+                                <li>냉동•이색•간편채소</li>
+                                <li>콩나물•버섯</li>
                             </ul>
                         </li>
                         <li class="category_item">과일•견과•쌀
                             <ul class="sub_category">
                                 <li>친환경</li>
-                                <a href="fruits.html"><li>제철과일</li></a>
+                                <li><a href="fruits.html">제철과일</a></li>
+                                <li>국산과일</li>
+                                <li>수입과일</li>
+                                <li>간편과일</li>
+                                <li>냉동•건과일</li>
+                                <li>견과류</li>
+                                <li>쌀•잡곡</li>
                             </ul>
                         </li>
                         <li class="category_item">수산•해산•건어물</li>
@@ -450,41 +365,40 @@
         <div class="cart_container">
             <div class="cart_list">
                 <ul>
-                    <li class="cart_item">
+                    <li class="cart_item" id="cart_item1">
                         <a href="">
                             <img src="img/strawberry.jpg" alt="딸기" style="width: 60px; height:78px; margin-right: 20px;">
                         </a>
                         <!-- <img src="img/strawberry.jpg" alt=""> -->
                         <div style="width: 340px;">친환경 설향 딸기 500g</div>
                         <div class="count_area">
-                            <button class="count_btn" style="background-image: url(img/minus.svg);"></button>
-                            <div>1</div>
-                            <button class="count_btn" style="background-image: url(img/plus.svg);"></button>
+                            <button class="count_btn minus" style="background-image: url(img/minus.svg);"></button>
+                            <div id="amount">1</div>
+                            <button class="count_btn plus" style="background-image: url(img/plus.svg);"></button>
                         </div>
-                        <div style="width: 130px; text-align: right;">12,990원</div>
-                        <button class="count_btn" style="background-image: url(img/x자.svg);"></button>
-                        <!-- <img src="img/x자.svg" alt=""> -->
+                        <div class="price" style="width: 130px; text-align: right;">12,990</div><span>원</span>
+                        <button class="count_btn" id="remove_item" style="background-image: url(img/x자.svg);"></button>
                     </li>
-                    <!-- <li></li>
-                    <li></li>
-                    <li></li> -->
                 </ul>
             </div>
             <div class="pay_container">
                 <div class="pay_info">
                     <div class="pay_item">
                         <span>상품금액</span>
-                        <span>12,990<span>원</span></span>
+                        <div>
+                        <span class="pay_price">12,990</span><span>원</span></div>
                     </div>
                     <div class="pay_item" style="padding-top: 15px;">
                         <span>배송비</span>
-                        <span>+ 3000<span>원</span></span>
+                        <div>
+                        <span>+</span><span class="delivery_fee">3000</span><span>원</span></div>
                     </div>
                     <div class="pay_item" style="padding-top: 15px;">
+                        
                         <span>결제예정금액</span>
-                        <span>15,990<span>원</span></span>
+                        <div><span class="total_pay">15,990</span><span>원</span></div>
                     </div>
-                    <button style="width: 100%; height: 50px; border: 0px none; margin-top: 30px;">구매하기</button>
+                    <button style="width: 100%; height: 50px; border: 0px none; margin-top: 30px; background-color: #b4e4ff;">구매하기</button>
                 </div>
             </div>
         </div>
@@ -565,15 +479,57 @@
                     sub_list[i].setAttribute('style', 'display:none;');
                 });
             }
-
-            const kart_btn = document.querySelector('.add_kart');
-            kart_btn.addEventListener('click', function(){
-                $('.popup').show();
+            //장바구니 수량 변경하는 부분
+            //수량 증가
+            let amount = document.querySelector('#amount');
+            let count = document.querySelector('#amount').textContent;
+            let price = document.getElementsByClassName('price');
+            let pay_price = document.getElementsByClassName('pay_price');
+            let total_pay = document.getElementsByClassName('total_pay');
+            const del_fee = document.getElementsByClassName('delivery_fee');
+            const pre_price = price[0].textContent.replace(",", "");
+            let total_price = 0;
+            let total_money;
+            const plus = document.getElementsByClassName('plus');
+            plus[0].addEventListener('click', function(){
+                count++;
+                amount.textContent = count;
+                total_price = pre_price * count;
+                if(total_price >= 40000){
+                    del_fee[0].textContent = 0;
+                }
+                total_money = total_price + parseInt(del_fee[0].textContent);
+                // console.log(total_pay);
+                //정규식을 이용한 3자리 콤마
+                // price[0].textContent = total_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                price[0].textContent = total_price.toLocaleString();
+                pay_price[0].textContent = total_price.toLocaleString();
+                total_pay[0].textContent = total_money.toLocaleString();
             });
-
-            $('.close').click(function (e) {
-                $('.popup').hide();
-            })
+            //수량 감소
+            const minus = document.getElementsByClassName('minus');
+            minus[0].addEventListener('click', function(){
+                if(count > 1) {
+                    count--;
+                } else if(count == 0){
+                    count = 1;
+                }
+                amount.textContent = count;
+                total_price = pre_price * count;
+                if(total_price < 40000) {
+                    del_fee[0].textContent = 3000;
+                }
+                total_money = total_price + parseInt(del_fee[0].textContent);
+                price[0].textContent = total_price.toLocaleString();
+                pay_price[0].textContent = total_price.toLocaleString();
+                total_pay[0].textContent = total_money.toLocaleString();
+            });
+            $('#remove_item').click(function(){
+                $('#cart_item1').remove();
+                $('.pay_price').text('0');
+                $('.delivery_fee').text('0');
+                $('.total_pay').text('0');
+            });
         }
     </script>
 </body>

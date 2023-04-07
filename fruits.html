@@ -13,40 +13,23 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
         header {
             width: 100%;
             height: 210px;
-            /* background-color: #DFFFD8; */
-            /* display: flex;
-            align-items: center;
-            justify-content: center; */
-            /* background-image: url(img/space.jpg); */
         }
-
         main {
             min-height: 900px;
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* align-items: center; */
-            text-align: center;
+            /* text-align: center; */
         }
-
         footer {
             height: 310px;
-            /* background-color: darkgray; */
         }
-
         fieldset {
             border: none;
         }
-
         a {
             text-decoration: none;
-            /* color: white;
-            font-weight: bold; */
         }
-
         .top_nav {
             position: relative;
             width: 100%;
@@ -54,56 +37,44 @@
             font-size: 12px;
             margin-right: 20px;
         }
-
         .menu_list {
             position: absolute;
             top: 0;
             right: 0;
-            /* margin-top: 10px; */
         }
-
         .menu_list > li {
             line-height: 30px;
             padding: 0 9px 0 10px;
         }
-
         .menu_list > li > a {
             color: black;
-            /* font-weight: bold; */
         }
-
         .header_inner {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 180px;
         }
-
         ul li {
             display: inline-block;
             list-style: none;
         }
-
         .main_logo {
             font-size: 40px;
             font-family: GmarketSansMedium;
-            /* color: #b4e4ff; */
             font-weight: bold;
             padding-left: 20px;
             margin-right: 50px;
             display: block;
             width: 20%;
-            /* z-index: 1; */
         }
         .main_logo a span {
             color: #b4e4ff;
         }
-
         .main_logo > a > img {
             width: 40px;
             height: 40px;
         }
-
         .search_box {
             width: 580px;
             height: 52px;
@@ -111,7 +82,6 @@
             display: flex;
             align-items: center;
         }
-
         .search_box input {
             flex: 9;
             height: 46px;
@@ -120,12 +90,10 @@
             border: none;
             font-size: 18px;
         }
-
         input:focus {
             outline: none;
             box-shadow: 0 0 10px #00235B;
         }
-
         .search_box button {
             flex: 1;
             height: 52px;
@@ -133,11 +101,8 @@
             outline: none;
             background-color: #b4e4ff;
         }
-        
         .nav_items{
             width: 100%;
-            /* height: 100px; */
-            /* align-items: center; */
             font-size: 30px;
             display: flex;
             align-items: center;
@@ -146,54 +111,9 @@
         .nav_items  ul  a {
             color: black;
         }
-
-        #main_category > li {
-            margin-left: 100px;
-        }
-
-        .main_msg {
-            width: 100%;
-            height: 200px;
-            background-image: url(img/space.jpg);
-        }
-        .login {
-            width: 300px;
-            height: 150px;
-            background-color: aquamarine;
-            margin-left: 50px;
-            /* padding: 16px 16px 12px 17px; */
-            padding-top: 10px;
-            text-align: center;
-        }
-        .login_msg {
-            margin-top: 20px;
-            color: gray;
-            font-size: 12px;
-        }
-        .login_btn {
-            width: 250px;
-            height: 48px;
-            margin-top: 20px;
-            /* margin-top: 10px; */
-            background-color: #F7C8E0;
-            border: none;
-        }
-        a > img {
-            /* margin-top: 10px; */
-        }
-
-        .img_slide {
-            /* width: 600px;
-            height: 300px; */
-            overflow: hidden;
-            margin-top: 10px;
-            /* display: none; */
-        }
-
         legend {
             display: none;
         }
-
         .btn_group button {
             margin-top: 10px;
             width: 100px;
@@ -207,78 +127,74 @@
             font-weight: normal;
             font-style: normal;
         }
-
+        @font-face {
+            font-family: 'KyoboHand';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #main_category > li {
+            margin-left: 100px;
+            font-family: KyoboHand;
+        }
+        #main_category > li:hover {
+            background-color: lightgray;
+            border-radius: 6px;
+        }
         .main_category {
             display: none;
             width: 170px;
-            height: 600px;
+            height: 800px;
             background-color: white;
             position: absolute;
         }
-
         .sub_category {
             display: none;
-            width: 170px;
-            height: 100px;
+            width: 200px;
+            height: 800px;
             background-color: white;
-            /* margin-left: 200px; */
             position: absolute;
             top: 0;
             left: 170px;
         }
-
-        /* .sub_category > li {
-            display: block;
-        } */
-
         #category_list:hover {
             cursor: pointer;
             background-color: lightgray;
             border-radius: 6px;
         }
         #category_list:hover .main_category{
-            /* color: #b4e4ff;
-            cursor: pointer; */
             display: block;
-            /* position: absolute; */
-            /* z-index: 1; */
+            z-index: 1;
         }
-
+        .main_category > li:hover {
+            background-color: lightgray;
+        }
+        .sub_category > li:hover {
+            background-color: lightgray;
+        }
         .main_category > li, .sub_category > li {
             display: block;
             font-size: 16px;
             height: 28px;
             text-align: left;
-            margin-left: 10px;
+            padding-left: 10px;
             margin-top: 10px;
+            font-family: KyoboHand;
         }
         .main_banner {
             width: 100%;
             height: 450px;
             background-color: black;
         }
-        .img_list > a > img {
-            /* position: absolute; */
+        .img_list > a > img {            
             width: 100%;
-            /* left: -30%; */
             height: 450px;
-            /* overflow: hidden; */
             object-fit: cover;
-
         }
-        /* a > p {
-            position: absolute;
-            top: 40%;
-            left: 30%;
-            font-size: 48px;
-            color: black;
-        } */
-
         .footer_left_item {
             display: flex;
             flex-direction: row;
         }
-
         .footer_btn {
             width: 140px;
             height: 40px;
@@ -287,54 +203,55 @@
             text-align: center;
             margin-right: 16px;
             margin-bottom: 16px;
-
         }
-
         .footer_container {
             display: flex;
             align-items: baseline;
             justify-content: center;
-
         }
-
         .footer_left {
             margin-left: 50px;
         }
-
         .footer_right {
             margin-left: 50px;
         }
-
         .footer_font {
             font-size: 12px;
             color: rgb(153, 153, 153);
             margin-bottom: 40px;
         }
-
         .container {
             display: flex;
-            /* justify-content: space-between; */
             align-items: left;
-            /* flex-direction: row; */
             width: 100%;
             flex-wrap: wrap;
             padding-left: 107px;
             padding-right: 107px;
             margin-top: 20px;
         }
-
         .fruits_link {
             width: 250px;
             height: 538px;
             color: black;
             margin-left: 10px;
         }
-
+        .fruits_info {
+            padding: 14px 10px 0 0;
+        }
+        .fruits_info > p {
+            padding-bottom: 2px;
+            font-size: 14px;
+            color: rgb(153, 153, 153);
+            line-height: 19px;
+        }
+        .fruits_info > span {
+            font-size: 16px;
+            line-height: 24px;
+        }
         .fruits_img {
             width: 250px;
             height: 320px;
         }
-
         .img_container {
             position: relative;
         }
@@ -342,7 +259,7 @@
             position: absolute;
             right: 10px;
             bottom: 55px;
-            z-index: 10;
+            /* z-index: 10; */
             height: 0px;
             background-color: transparent;
             border: none;
@@ -358,35 +275,33 @@
             margin-left:-10%;
             height: 300px;
             margin-top: -200px;
-            z-index: 1000;
+            /* z-index: 1000; */
             background: white;
             border: 1px solid #d1d8dd;
             box-shadow: 0 0 6px 1px rgb(0 0 0 / 30%);
             border-radius: 6px;
-     }
-     .popup_container {
+        }
+        .popup_container {
         margin: 30px;
-        /* display: flex; */
         text-align: center;
-     }
-
-     .popup_btn {
-        width: 45%;
-        height: 50px;
-        display: inline;
-        border: none;
-        margin-top: 70px;
-     }
-     .popup_text {
-        text-align: left;
-     }
-     .cnt_btn {
-        width: 40px;
-        border: none;
-        font-size: 20px;
-        background-color: transparent;
-        cursor: pointer;
-     }
+        }
+        .popup_btn {
+            width: 45%;
+            height: 50px;
+            display: inline;
+            border: none;
+            margin-top: 70px;
+        }
+        .popup_text {
+            text-align: left;
+        }
+        .cnt_btn {
+            width: 40px;
+            border: none;
+            font-size: 20px;
+            background-color: transparent;
+            cursor: pointer;
+        }
     </style>
     <script src="https://kit.fontawesome.com/fb3d54b975.js" crossorigin="anonymous"></script>
 </head>
@@ -404,8 +319,7 @@
         </div>
         <div class="header_inner">
             <div class="main_logo">
-                <a href="main.html">
-                <!-- <i class="fa-solid fa-rocket" style="color: #b4e4ff; font-size: 60px;"></i> -->
+                <a href="login_ok.html">
                 <img src="img/alien_2.png" alt="">
                 <span>우주마켓</span></a>
             </div>
@@ -430,13 +344,25 @@
                         <li class="category_item">채소
                             <ul class="sub_category">
                                 <li>친환경</li>
-                                <li>고구마/감자/당근</li>
+                                <li>고구마•감자•당근</li>
+                                <li>시금치•쌈채소•나물</li>
+                                <li>브로콜리•파프리카•양배추</li>
+                                <li>양파•대파•마늘•배추</li>
+                                <li>오이•호박•고추</li>
+                                <li>냉동•이색•간편채소</li>
+                                <li>콩나물•버섯</li>
                             </ul>
                         </li>
                         <li class="category_item">과일•견과•쌀
                             <ul class="sub_category">
                                 <li>친환경</li>
-                                <li>제철과일</li>
+                                <li><a href="fruits.html">제철과일</a></li>
+                                <li>국산과일</li>
+                                <li>수입과일</li>
+                                <li>간편과일</li>
+                                <li>냉동•건과일</li>
+                                <li>견과류</li>
+                                <li>쌀•잡곡</li>
                             </ul>
                         </li>
                         <li class="category_item">수산•해산•건어물</li>
@@ -466,7 +392,9 @@
                 <li><a href="">브랜드관</a></li>
             </ul>
         </nav>
-        <img src="img/real_fruits.png" alt="과일배너" style="margin-top: 10px;">
+        <div style="text-align: center;">
+            <img src="img/real_fruits.png" alt="과일배너" style="margin-top: 10px;">
+        </div>
         <div class="container">
             <a href="goods.html" class="fruits_link">
                 <div class="fruits_item">
@@ -487,7 +415,7 @@
                     
                 </div>
             </a>
-            <a href="/goods/1" class="fruits_link">
+            <a href="" class="fruits_link">
                 <div class="fruits_item">
                     <img src="img/apple.jpg" alt="사과" class="fruits_img">
                     <div class="fruits_info">
@@ -498,7 +426,7 @@
                     </div>
                 </div>
             </a>
-            <a href="/goods/1" class="fruits_link">
+            <a href="" class="fruits_link">
                 <div class="fruits_item">
                     <img src="img/oranges.jpg" alt="오렌지" class="fruits_img">
                     <div class="fruits_info">
@@ -509,7 +437,7 @@
                     </div>
                 </div>
             </a>
-            <a href="/goods/1" class="fruits_link">
+            <a href="" class="fruits_link">
                 <div class="fruits_item">
                     <img src="img/blueberry.jpg" alt="블루베리" class="fruits_img">
                     <div class="fruits_info">
@@ -520,7 +448,7 @@
                     </div>
                 </div>
             </a>
-            <a href="/goods/1" class="fruits_link">
+            <a href="" class="fruits_link">
                 <div class="fruits_item">
                     <img src="img/shine.jpg" alt="샤인머스캣" class="fruits_img">
                     <div class="fruits_info">
@@ -531,7 +459,7 @@
                     </div>
                 </div>
             </a>
-            <a href="/goods/1" class="fruits_link">
+            <a href="" class="fruits_link">
                 <div class="fruits_item">
                     <img src="img/k_melon.jpg" alt="참외" class="fruits_img">
                     <div class="fruits_info">
@@ -542,7 +470,7 @@
                     </div>
                 </div>
             </a>
-            <a href="/goods/1" class="fruits_link">
+            <a href="" class="fruits_link">
                 <div class="fruits_item">
                     <img src="img/tomato.jpg" alt="토마토" class="fruits_img">
                     <div class="fruits_info">
@@ -553,7 +481,7 @@
                     </div>
                 </div>
             </a>
-            <a href="/goods/1" class="fruits_link">
+            <a href="" class="fruits_link">
                 <div class="fruits_item">
                     <img src="img/avocado.jpg" alt="아보카도" class="fruits_img">
                     <div class="fruits_info">
